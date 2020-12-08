@@ -1,0 +1,48 @@
+ARGoS-Arena README
+===================
+:Author: David Garzon Ramos
+:Email:  dgarzonr@ulb.ac.be
+:Date:   November 19th, 2020
+
+What is argos3-phormica?
+--------------------
+
+argos3-phormica is a plugin that enables the use of Phormica: a Pheromone Release and Detection System in ARGoS. The plugin contains
+the software modules for the simulated version. Therefore, the
+user can develop a control software for Phormica and test it in a virtual environment. 
+
+argos3-phormica is released under the terms of the MIT license.
+
+Downloading argos3-phormica
+-----------------------
+
+You can download the development sources through git:
+
+ $ git clone https://github.com/demiurge-project/argos3-phormica.git argos3-phormica
+
+Compiling argos3-phormica
+---------------------
+
+Requirements
+~~~~~~~~~~~~
+
+Before executing the following commands, you need to download, compile, and install argos3: https://github.com/ilpincy/argos3
+
+Compiling the code
+~~~~~~~~~~~~~~~~~~
+
+The compilation of ARGoS is configured through CMake.
+
+Compiling for the simulator
++++++++++++++++++++++++++++
+
+ $ cd argos3-phormica
+ $ mkdir build
+ $ cd build
+ $ cmake ../src
+ $ make
+ $ sudo make install
+
+If you wish to load the library without installing:
+$ export ARGOS_PLUGIN_PATH=/path/to/argos3-phormica/plugins/robots/phormica
+
